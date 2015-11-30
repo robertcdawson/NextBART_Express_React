@@ -11,7 +11,7 @@ Instructions
 3. cd to repo
 4. Run:
         npm start
-5. Open http://localhost:3000/
+5. Open [http://localhost:3000/](http://localhost:3000/)
 
 __Status__
 
