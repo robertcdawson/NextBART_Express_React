@@ -5,18 +5,16 @@ Description
 --------
 This Express-React app parses the BART API into JSON format (or, JXON) and shows which trains are coming to a given station as well as the number of cars on each train.
 
-Status
---------
-Currently works with a static string parsed as XML (and then as JXON).
-
 To Run
 --------
-Get [http-server](https://github.com/indexzero/http-server) and run:
+    npm start
 
-    http-server ./ -p 8000 -c-1
+Status
+--------
+Currently pulls train info. at the North Concord/Martinex station.
 
 Next Steps
 --------
-1. Add dropdown with stations
-2. Update XML state per dropdown selection
+1. Add dropdown with BART stations
+2. Update view per dropdown selection
 3. Integrate Require.js
