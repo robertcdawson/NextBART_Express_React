@@ -13,7 +13,7 @@ This Express-React app parses the BART API into JSON format (or, JXON) and shows
 
 ### Status
 
-Currently pulls train info. at the North Concord/Martinex station.
+Currently pulls train info. at the North Concord/Martinez station.
 
 ### TODO
 
