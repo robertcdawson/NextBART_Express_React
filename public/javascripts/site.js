@@ -77,13 +77,40 @@ var TrainStationTable = React.createClass({
   }
 });
 
+// Render station dropdown menu
+// Parent: TrainStationsContainer
+var TrainStationDropdown = React.createClass({
+  render: function() {
+    $('.dropdown-toggle').dropdown();
+
+    return (
+      <div className="dropdown">
+        <button className="btn btn-default dropdown-toggle" type="button" id="stationsDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Dropdown
+          <span className="caret"></span>
+        </button>
+        <ul className="dropdown-menu" aria-labelledby="stationsDropdownMenu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something here</a></li>
+          <li role="separator" className="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+    );
+  }
+});
+
 // Render train station container
 // Parent: FilterableTrainTable
 var TrainStationsContainer = React.createClass({
   render: function() {
     var trainInfo = this.props.trainInfo;
     return (
-      <TrainStationTable trainInfo={trainInfo} />
+      <div>
+        <TrainStationDropdown />
+        <TrainStationTable trainInfo={trainInfo} />
+      </div>
     );
   }
 });
