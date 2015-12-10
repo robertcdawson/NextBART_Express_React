@@ -1,7 +1,8 @@
 {
   "name": "nextbart",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
+  "description": "This Express-React app parses the BART API into JSON format (or, JXON) and shows which trains are coming to a given station as well as the number of cars on each train.",
+  "main": "app.js",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -14,5 +15,21 @@
     "morgan": "~1.6.1",
     "request": "~2.67.0",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertcdawson/NextBART_Express_React"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "BART",
+    "commute",
+    "transportation"
+  ],
+  "license": "MIT"
 }

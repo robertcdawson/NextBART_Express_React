@@ -1,0 +1,8 @@
+{
+  "name": "NextBART",
+  "description": "This Express-React app parses the BART API into JSON format (or, JXON) and shows which trains are coming to a given station as well as the number of cars on each train.",
+  "repository": "https://github.com/robertcdawson/NextBART_Express_React",
+  "logo": "https://avatars1.githubusercontent.com/u/1414112",
+  "keywords": ["node", "heroku", "express", "BART", "commute", "transportation"],
+  "image": "heroku/nodejs"
+}
