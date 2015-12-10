@@ -5,18 +5,17 @@ This Express-React app parses the BART API into JSON format (or, JXON) and shows
 ## Instructions
 
 1. Clone repo
-2. Open Terminal
-3. cd to repo
-4. Run:
-        npm start
-5. Open <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a>
+1. Open Terminal
+1. cd to repo
+1. Run: `npm start`
+1. Open <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a>
 
 ### Status
 
-Currently pulls train info. at the North Concord/Martinez station.
+Pulls train info. from all stations!
 
 ### TODO
 
-1. Add dropdown with BART stations
-2. Update view per dropdown selection
-3. Integrate Require.js
+1. Populate dropdown from API
+1. Integrate Require.js
+1. Improve UI
