@@ -30,9 +30,11 @@ var TrainDestination = React.createClass({
     var etd = this.props.etd;
     var destination = etd.destination;
     var arrivalInfo = [];
-    etd.estimate.forEach(function(train, index) {
-      arrivalInfo.push(<TrainArrival minutes={train.minutes} length={train.length} key={index} />);
-    });
+    if (etd.estimate) {
+      etd.estimate.forEach(function(train, index) {
+        arrivalInfo.push(<TrainArrival minutes={train.minutes} length={train.length} key={index} />);
+      });
+    }
     return (
       <div className="panel panel-default">
         <div className="panel-heading">
@@ -65,9 +67,11 @@ var TrainStationTable = React.createClass({
   render: function() {
     var trainInfo = this.props.trainInfo;
     var destinations = [];
-    trainInfo.station.etd.forEach(function(etd, index) {
-      destinations.push(<TrainDestination etd={etd} key={index} />);
-    });
+    if (trainInfo.station.etd) {
+      trainInfo.station.etd.forEach(function(etd, index) {
+        destinations.push(<TrainDestination etd={etd} key={index} />);
+      });
+    }
     return (
       <div>
         <TrainStationHeading trainInfo={trainInfo} />
