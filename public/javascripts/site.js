@@ -81,8 +81,6 @@ var TrainStationTable = React.createClass({
 // Parent: TrainStationsContainer
 var TrainStationDropdown = React.createClass({
   render: function() {
-    $('.dropdown-toggle').dropdown();
-
     return (
       <div className="dropdown">
         <button className="btn btn-default dropdown-toggle" type="button" id="stationsDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -90,11 +88,51 @@ var TrainStationDropdown = React.createClass({
           <span className="caret"></span>
         </button>
         <ul className="dropdown-menu" aria-labelledby="stationsDropdownMenu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something here</a></li>
-          <li role="separator" className="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li id="12th"><a href="#">12TH</a></li>
+          <li id="16th"><a href="#">16TH</a></li>
+          <li id="19th"><a href="#">19TH</a></li>
+          <li id="24th"><a href="#">24TH</a></li>
+          <li id="ashb"><a href="#">ASHB</a></li>
+          <li id="balb"><a href="#">BALB</a></li>
+          <li id="bayf"><a href="#">BAYF</a></li>
+          <li id="cast"><a href="#">CAST</a></li>
+          <li id="civc"><a href="#">CIVC</a></li>
+          <li id="cols"><a href="#">COLS</a></li>
+          <li id="colm"><a href="#">COLM</a></li>
+          <li id="conc"><a href="#">CONC</a></li>
+          <li id="daly"><a href="#">DALY</a></li>
+          <li id="dbrk"><a href="#">DBRK</a></li>
+          <li id="dubl"><a href="#">DUBL</a></li>
+          <li id="deln"><a href="#">DELN</a></li>
+          <li id="plza"><a href="#">PLZA</a></li>
+          <li id="embr"><a href="#">EMBR</a></li>
+          <li id="frmt"><a href="#">FRMT</a></li>
+          <li id="ftvl"><a href="#">FTVL</a></li>
+          <li id="glen"><a href="#">GLEN</a></li>
+          <li id="hayw"><a href="#">HAYW</a></li>
+          <li id="lafy"><a href="#">LAFY</a></li>
+          <li id="lake"><a href="#">LAKE</a></li>
+          <li id="mcar"><a href="#">MCAR</a></li>
+          <li id="mlbr"><a href="#">MLBR</a></li>
+          <li id="mont"><a href="#">MONT</a></li>
+          <li id="nbrk"><a href="#">NBRK</a></li>
+          <li id="ncon"><a href="#">NCON</a></li>
+          <li id="oakl"><a href="#">OAKL</a></li>
+          <li id="orin"><a href="#">ORIN</a></li>
+          <li id="pitt"><a href="#">PITT</a></li>
+          <li id="phil"><a href="#">PHIL</a></li>
+          <li id="powl"><a href="#">POWL</a></li>
+          <li id="rich"><a href="#">RICH</a></li>
+          <li id="rock"><a href="#">ROCK</a></li>
+          <li id="sbrn"><a href="#">SBRN</a></li>
+          <li id="sfia"><a href="#">SFIA</a></li>
+          <li id="sanl"><a href="#">SANL</a></li>
+          <li id="shay"><a href="#">SHAY</a></li>
+          <li id="ssan"><a href="#">SSAN</a></li>
+          <li id="ucty"><a href="#">UCTY</a></li>
+          <li id="wcrk"><a href="#">WCRK</a></li>
+          <li id="wdub"><a href="#">WDUB</a></li>
+          <li id="woak"><a href="#">WOAK</a></li>
         </ul>
       </div>
     );
