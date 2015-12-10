@@ -84,60 +84,71 @@ var TrainStationTable = React.createClass({
 // Render station dropdown menu
 // Parent: TrainStationsContainer
 var TrainStationDropdown = React.createClass({
+  getInitialState: function() {
+    return {
+      TrainStationDropdownValue: 'embr'
+    }
+  },
+
+  handleChange: function(newState) {
+    this.setState({
+      TrainStationDropdownValue: newState.target.value
+    });
+    // Update parent's callbackParent property
+    this.props.callbackParent(newState.target.value);
+  },
+
   render: function() {
+    var TrainStationDropdownValue = this.state.TrainStationDropdownValue;
     return (
       <div className="dropdown">
-        <button className="btn btn-default dropdown-toggle" type="button" id="stationsDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Dropdown
-          <span className="caret"></span>
-        </button>
-        <ul className="dropdown-menu" aria-labelledby="stationsDropdownMenu">
-          <li id="12th"><a href="#">12TH</a></li>
-          <li id="16th"><a href="#">16TH</a></li>
-          <li id="19th"><a href="#">19TH</a></li>
-          <li id="24th"><a href="#">24TH</a></li>
-          <li id="ashb"><a href="#">ASHB</a></li>
-          <li id="balb"><a href="#">BALB</a></li>
-          <li id="bayf"><a href="#">BAYF</a></li>
-          <li id="cast"><a href="#">CAST</a></li>
-          <li id="civc"><a href="#">CIVC</a></li>
-          <li id="cols"><a href="#">COLS</a></li>
-          <li id="colm"><a href="#">COLM</a></li>
-          <li id="conc"><a href="#">CONC</a></li>
-          <li id="daly"><a href="#">DALY</a></li>
-          <li id="dbrk"><a href="#">DBRK</a></li>
-          <li id="dubl"><a href="#">DUBL</a></li>
-          <li id="deln"><a href="#">DELN</a></li>
-          <li id="plza"><a href="#">PLZA</a></li>
-          <li id="embr"><a href="#">EMBR</a></li>
-          <li id="frmt"><a href="#">FRMT</a></li>
-          <li id="ftvl"><a href="#">FTVL</a></li>
-          <li id="glen"><a href="#">GLEN</a></li>
-          <li id="hayw"><a href="#">HAYW</a></li>
-          <li id="lafy"><a href="#">LAFY</a></li>
-          <li id="lake"><a href="#">LAKE</a></li>
-          <li id="mcar"><a href="#">MCAR</a></li>
-          <li id="mlbr"><a href="#">MLBR</a></li>
-          <li id="mont"><a href="#">MONT</a></li>
-          <li id="nbrk"><a href="#">NBRK</a></li>
-          <li id="ncon"><a href="#">NCON</a></li>
-          <li id="oakl"><a href="#">OAKL</a></li>
-          <li id="orin"><a href="#">ORIN</a></li>
-          <li id="pitt"><a href="#">PITT</a></li>
-          <li id="phil"><a href="#">PHIL</a></li>
-          <li id="powl"><a href="#">POWL</a></li>
-          <li id="rich"><a href="#">RICH</a></li>
-          <li id="rock"><a href="#">ROCK</a></li>
-          <li id="sbrn"><a href="#">SBRN</a></li>
-          <li id="sfia"><a href="#">SFIA</a></li>
-          <li id="sanl"><a href="#">SANL</a></li>
-          <li id="shay"><a href="#">SHAY</a></li>
-          <li id="ssan"><a href="#">SSAN</a></li>
-          <li id="ucty"><a href="#">UCTY</a></li>
-          <li id="wcrk"><a href="#">WCRK</a></li>
-          <li id="wdub"><a href="#">WDUB</a></li>
-          <li id="woak"><a href="#">WOAK</a></li>
-        </ul>
+        <select value={TrainStationDropdownValue} onChange={this.handleChange}>
+          <option value="12th">12TH</option>
+          <option value="16th">16TH</option>
+          <option value="19th">19TH</option>
+          <option value="24th">24TH</option>
+          <option value="ashb">ASHB</option>
+          <option value="balb">BALB</option>
+          <option value="bayf">BAYF</option>
+          <option value="cast">CAST</option>
+          <option value="civc">CIVC</option>
+          <option value="cols">COLS</option>
+          <option value="colm">COLM</option>
+          <option value="conc">CONC</option>
+          <option value="daly">DALY</option>
+          <option value="dbrk">DBRK</option>
+          <option value="dubl">DUBL</option>
+          <option value="deln">DELN</option>
+          <option value="plza">PLZA</option>
+          <option value="embr">EMBR</option>
+          <option value="frmt">FRMT</option>
+          <option value="ftvl">FTVL</option>
+          <option value="glen">GLEN</option>
+          <option value="hayw">HAYW</option>
+          <option value="lafy">LAFY</option>
+          <option value="lake">LAKE</option>
+          <option value="mcar">MCAR</option>
+          <option value="mlbr">MLBR</option>
+          <option value="mont">MONT</option>
+          <option value="nbrk">NBRK</option>
+          <option value="ncon">NCON</option>
+          <option value="oakl">OAKL</option>
+          <option value="orin">ORIN</option>
+          <option value="pitt">PITT</option>
+          <option value="phil">PHIL</option>
+          <option value="powl">POWL</option>
+          <option value="rich">RICH</option>
+          <option value="rock">ROCK</option>
+          <option value="sbrn">SBRN</option>
+          <option value="sfia">SFIA</option>
+          <option value="sanl">SANL</option>
+          <option value="shay">SHAY</option>
+          <option value="ssan">SSAN</option>
+          <option value="ucty">UCTY</option>
+          <option value="wcrk">WCRK</option>
+          <option value="wdub">WDUB</option>
+          <option value="woak">WOAK</option>
+        </select>
       </div>
     );
   }
@@ -146,11 +157,26 @@ var TrainStationDropdown = React.createClass({
 // Render train station container
 // Parent: FilterableTrainTable
 var TrainStationsContainer = React.createClass({
+  getInitialState: function() {
+    return {
+      TrainStationSelected: 'embr'
+    }
+  },
+
+  onChildChanged: function(newState) {
+    this.setState({
+      TrainStationSelected: newState
+    });
+    // Update parent's callbackParent property
+    this.props.callbackParent(newState);
+  },
+
   render: function() {
     var trainInfo = this.props.trainInfo;
+    console.log('this.state.TrainStationSelected:', this.state.TrainStationSelected);
     return (
       <div>
-        <TrainStationDropdown />
+        <TrainStationDropdown callbackParent={this.onChildChanged} />
         <TrainStationTable trainInfo={trainInfo} />
       </div>
     );
@@ -160,11 +186,24 @@ var TrainStationsContainer = React.createClass({
 // Render outermost container
 // Parent: none
 var FilterableTrainTable = React.createClass({
+  getInitialState: function() {
+    return {
+      station: 'embr'
+    }
+  },
+
+  onChildChanged: function(newState) {
+    this.setState({
+      station: newState
+    });
+  },
+
   render: function() {
     var trainInfo;
-
+    var station = this.state.station;
+    console.log('station:', station);
     $.ajax({
-      url: '/api',
+      url: '/api/' + station,
       type: 'get',
       async: false,
       success: function(data) {
@@ -181,7 +220,7 @@ var FilterableTrainTable = React.createClass({
         <div className="page-header">
           <h1>NextBART<br/><small>Find your next train</small></h1>
         </div>
-        <TrainStationsContainer trainInfo={trainInfo} />
+        <TrainStationsContainer trainInfo={trainInfo} callbackParent={this.onChildChanged} />
       </div>
     );
   }
