@@ -2,7 +2,7 @@ var express = require('express');
 var request = require('request');
 var router = express.Router();
 
-var apiKey = process.env.API_KEY || 'J5HV-5EUE-5ZZ9-XERY';
+var apiKey = 'J5HV-5EUE-5ZZ9-XERY';
 
 /* GET BART API */
 // ? means optional
