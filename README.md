@@ -2,6 +2,8 @@
 
 This Express-React app parses the BART API into JSON format (or, JXON) and shows which trains are coming to a given station as well as the number of cars on each train.
 
+<a href="https://nextbart-express-react.herokuapp.com/" target="_blank">View on Heroku.</a>
+
 ## Instructions
 
 1. Clone repo
